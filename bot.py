@@ -1,7 +1,7 @@
 import os
 import requests
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("KREEGY_BOT")
 CHAT_ID = "@tgminiappsupdates"
 
 MESSAGE = """🔥 Buying Old Tinder Accounts 🔥
