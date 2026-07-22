@@ -20,5 +20,5 @@ jobs:
 
       - name: Run Bot
         env:
-          KREEGY_BOT: ${{ secrets.KREEGY_BOT }}
+          Kreegybot: ${{ secrets.Kreegybot }}
         run: python bot.py
