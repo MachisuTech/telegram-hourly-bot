@@ -2,23 +2,24 @@ name: Telegram Hourly Poster
 
 on:
   schedule:
+    # Runs at minute 0 of every hour
     - cron: '0 * * * *'
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering from the Actions tab
 
 jobs:
   post:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Send Message to Telegram Channel
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            --data-urlencode "chat_id=@tgminiappsupdates" \
+            --data-urlencode "text=Buying Old Tinder Accounts 🔥
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+          2010 – 2024 (All Months) = 22 USDT
+          2025 first 5 months 17
+          All age accepted
+          2025 also 1-5 months
 
-      - run: pip install -r requirements.txt
-
-      - name: Run Bot
-        env:
-          Kreegybot: ${{ secrets.Kreegybot }}
-        run: python bot.py
+          We need old tinder account 
+          2025 7-12 girl account . tekegram bot is Kreegyrbot"
